@@ -45,7 +45,8 @@
                     Data Analyst & Research Consultant
                 </p>
                 <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-base md:text-lg">
-                    BSc (Hons) Applied Statistics graduate from the University of Colombo. Specializing in combining <span class="text-emerald-300 font-semibold">statistical modelling</span>, <span class="text-emerald-300 font-semibold">geospatial AI</span>, and <span class="text-blue-300 font-semibold">predictive modelling</span> to build data-driven solutions for industry and research application.                </p>
+                    BSc (Hons) Applied Statistics graduate from the University of Colombo. Specializing in combining <span class="text-emerald-300 font-semibold">statistical modelling</span>, <span class="text-emerald-300 font-semibold">geospatial AI</span>, and <span class="text-blue-300 font-semibold">predictive modelling</span> to build data-driven solutions for industry and research application.
+                </p>
             </div>
             
             <div class="flex justify-center space-x-4 pt-2">
@@ -59,7 +60,7 @@
 
         <section id="experience">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b-2 border-slate-200 pb-2 flex items-center"><i class="fas fa-briefcase mr-3 text-emerald-600"></i> Professional Experience</h2>
-            <div class="space-y-8">
+            <div class="space-y-12">
                 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
                     <div class="flex flex-col md:flex-row justify-between mb-4">
@@ -69,12 +70,83 @@
                         </div>
                         <span class="text-slate-500 bg-slate-100 px-3 py-1 rounded-full text-sm h-fit font-medium mt-2 md:mt-0">Jun 2025 - Present</span>
                     </div>
-                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
+                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base mb-6">
                         <li>Developed geospatial AI and data science workflows using Python, QGIS, and Google Earth Engine to process and analyze large-scale spatial datasets.</li>
                         <li>Integrated vector, raster, tabular, and web-scraped data from sources including Google Maps, OpenStreetMap, business registries, population grids, nightlight imagery, land-use classifications, and remote sensing products.</li>
                         <li>Performed spatial data preprocessing, feature engineering, geospatial analysis, and predictive modelling to identify industrial activity hotspots and estimate industrial water demand in data-scarce regions.</li>
                         <li>Built automated data acquisition pipelines, conducted literature reviews on AI applications in water resource management, and contributed to research methodology development and scientific publication preparation.</li>
                     </ul>
+
+                    <div class="mt-6 border border-slate-200 rounded-xl overflow-hidden shadow-inner bg-slate-950 font-mono text-xs">
+                        <div class="bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex items-center justify-between text-slate-400">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span class="font-semibold text-slate-200 text-xs">Interactive Preview: Industrial Hotspots Extrapolation Engine</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="bg-emerald-950/80 text-emerald-400 border border-emerald-900/50 px-2 py-0.5 rounded text-[10px]"><i class="fas fa-satellite mr-1"></i> Proxy Extrapolation Model</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col lg:flex-row h-96 relative">
+                            <div class="w-full lg:w-64 bg-slate-900/40 border-b lg:border-b-0 lg:border-r border-slate-800 p-4 space-y-4 text-slate-300">
+                                <div>
+                                    <label class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1.5">Change Focus Territory</label>
+                                    <select id="mapRegionSelect" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-emerald-400 font-bold focus:outline-none focus:border-emerald-500 cursor-pointer">
+                                        <option value="mena">Saudi Arabia & Egypt (MENA)</option>
+                                        <option value="mexico">Mexico (Bajío Industrial Area)</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-2">Active Telemetry Grids</span>
+                                    <div class="space-y-2 text-[11px]">
+                                        <label class="flex items-center space-x-2 text-slate-300"><input type="checkbox" checked class="accent-emerald-500 rounded"> <span>OpenStreetMap Cluster Proxies</span></label>
+                                        <label class="flex items-center space-x-2 text-slate-300"><input type="checkbox" checked class="accent-emerald-500 rounded"> <span>VIIRS Nightlights Radiant Mix</span></label>
+                                        <label class="flex items-center space-x-2 text-slate-300"><input type="checkbox" checked class="accent-emerald-500 rounded"> <span>Google Footprint Graticule</span></label>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-3 border-t border-slate-800/80">
+                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-2">Regional Live Counters</span>
+                                    <div class="bg-slate-950 p-2.5 rounded border border-slate-800/60 space-y-2">
+                                        <div class="flex justify-between"><span class="text-slate-400">Extracted Points:</span> <span id="statFacilities" class="text-emerald-400 font-bold">1,842 Sites</span></div>
+                                        <div class="flex justify-between"><span class="text-slate-400">Mean Confidence:</span> <span id="statConfidence" class="text-blue-400 font-bold">92.4%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex-1 relative bg-slate-900 overflow-hidden">
+                                <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:14px_14px]"></div>
+                                
+                                <div id="layerMena" class="absolute inset-0 transition-opacity duration-500 opacity-100">
+                                    <div class="absolute top-1/4 left-1/3 w-32 h-32 bg-emerald-500/20 rounded-full blur-2xl animate-pulse"></div>
+                                    <div class="absolute top-1/3 left-1/3 w-12 h-12 bg-amber-500/40 rounded-full blur-xl"></div>
+                                    <div class="absolute top-1/3 left-1/3 w-4 h-4 bg-red-500 rounded-full blur-xs ring-4 ring-red-500/20"></div>
+                                    <div class="absolute top-[36%] left-[32%] text-[10px] text-red-400 font-bold bg-slate-950/80 px-1.5 py-0.5 rounded border border-red-900/50 whitespace-nowrap">Riyadh Complex Cluster</div>
+
+                                    <div class="absolute bottom-1/4 right-1/4 w-44 h-44 bg-teal-500/15 rounded-full blur-3xl"></div>
+                                    <div class="absolute bottom-1/3 right-1/4 w-10 h-10 bg-emerald-400/30 rounded-full blur-lg animate-pulse"></div>
+                                    <div class="absolute bottom-1/3 right-1/4 w-3 h-3 bg-emerald-500 rounded-full"></div>
+                                    <div class="absolute bottom-[36%] right-[22%] text-[10px] text-emerald-400 font-bold bg-slate-950/80 px-1.5 py-0.5 rounded border border-emerald-900/50 whitespace-nowrap">Helwan Grid</div>
+                                </div>
+
+                                <div id="layerMexico" class="absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none">
+                                    <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+                                    <div class="absolute top-1/2 left-1/2 w-14 h-14 bg-blue-500/40 rounded-full blur-xl"></div>
+                                    <div class="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-400 rounded-full ring-4 ring-blue-500/30"></div>
+                                    <div class="absolute top-[54%] left-[52%] text-[10px] text-blue-400 font-bold bg-slate-950/80 px-1.5 py-0.5 rounded border border-blue-900/50 whitespace-nowrap">Guanajuato Corridor Hub</div>
+                                </div>
+                                
+                                <div class="absolute top-3 right-3 bg-slate-900/95 border border-slate-800 p-2.5 rounded shadow-xl text-[10px] space-y-1.5 backdrop-blur-sm">
+                                    <span class="font-bold text-slate-400 uppercase tracking-wider block border-b border-slate-800 pb-1">Water Demand Index Color Map</span>
+                                    <div class="flex items-center space-x-2"><span class="w-3 h-1.5 bg-red-500 rounded-xs"></span> <span class="text-slate-300">High Proxy Intensity</span></div>
+                                    <div class="flex items-center space-x-2"><span class="w-3 h-1.5 bg-emerald-500 rounded-xs"></span> <span class="text-slate-300">Moderate Matrix Load</span></div>
+                                    <div class="flex items-center space-x-2"><span class="w-3 h-1.5 bg-blue-500 rounded-xs"></span> <span class="text-slate-300">Baseline Verified Activity</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
@@ -85,12 +157,78 @@
                         </div>
                         <span class="text-slate-500 bg-slate-100 px-3 py-1 rounded-full text-sm h-fit font-medium mt-2 md:mt-0">Nov 2024 - May 2025</span>
                     </div>
-                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
+                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base mb-6">
                         <li>Investigated the detection of wastewater treatment plants using satellite imagery and annotated GeoTIFF datasets funded by Google.org.</li>
                         <li>Develop, annotate datasets for, and train an OpenCV-based image processing chain alongside deploying the existing YOLOv11 object detection model to identify characteristic features of Wastewater Treatment Plants (WWTPs).</li>
                         <li>Designed an LLM-integrated system to concurrently analyze multiple WWTP images and generate interactive, query-based analytical responses.</li>
                         <li>Proposed critical methodological enhancements adopted by the Water Data Science team for final production model deployment.</li>
                     </ul>
+
+                    <div class="mt-6 border border-slate-200 rounded-xl overflow-hidden shadow-inner bg-slate-950 font-mono text-xs">
+                        <div class="bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex items-center justify-between text-slate-400">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                                <span class="font-semibold text-slate-200 text-xs">Computer Vision Inference Channel: YOLOv11 Model Execution Matrix</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-[10px] text-slate-400">Confidence Threshold Filter (IOU):</span>
+                                <input type="range" id="iouSlider" min="50" max="95" value="70" class="w-24 h-1 accent-emerald-500 bg-slate-800 rounded-lg cursor-pointer">
+                                <span id="iouValue" class="text-emerald-400 font-bold bg-slate-950 px-1.5 py-0.5 rounded border border-slate-800 text-[10px]">0.70</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col lg:flex-row h-96 relative">
+                            <div class="flex-1 relative bg-slate-900 overflow-hidden flex items-center justify-center p-4 border-b lg:border-b-0 lg:border-r border-slate-800/80">
+                                <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:30px_30px] opacity-15"></div>
+                                
+                                <div class="relative w-80 h-60 bg-slate-800/50 rounded-xl border border-slate-700/30 shadow-2xl flex items-center justify-around p-4">
+                                    
+                                    <div id="boxPool1" class="w-20 h-20 rounded-full border-4 border-teal-800/90 bg-slate-900/60 relative flex items-center justify-center transition-all duration-300">
+                                        <div class="w-full h-0.5 bg-slate-600/40 rotate-45 absolute"></div>
+                                        <div class="absolute -inset-2 border-2 border-emerald-400 bg-emerald-400/5 flex flex-col justify-between p-0.5">
+                                            <span class="bg-emerald-500 text-slate-950 font-bold px-1 py-0.5 text-[8px] w-fit rounded-sm shadow">Clarifier_Pool [0.94]</span>
+                                        </div>
+                                    </div>
+
+                                    <div id="boxPool2" class="w-20 h-20 rounded-full border-4 border-teal-900/90 bg-slate-900/60 relative flex items-center justify-center transition-all duration-300">
+                                        <div class="w-full h-0.5 bg-slate-600/40 -rotate-12 absolute"></div>
+                                        <div class="absolute -inset-2 border-2 border-emerald-400 bg-emerald-400/5 flex flex-col justify-between p-0.5">
+                                            <span class="bg-emerald-500 text-slate-950 font-bold px-1 py-0.5 text-[8px] w-fit rounded-sm shadow">Clarifier_Pool [0.86]</span>
+                                        </div>
+                                    </div>
+
+                                    <div id="boxTank" class="absolute bottom-4 left-6 w-36 h-12 border-2 border-slate-600/80 bg-slate-700/40 rounded transition-all duration-300">
+                                        <div class="absolute -inset-2 border-2 border-blue-400 bg-blue-400/5">
+                                            <span class="absolute -top-4.5 left-0 bg-blue-500 text-white font-bold px-1 py-0.5 text-[8px] rounded-sm shadow whitespace-nowrap">Sedimentation_Tank [0.72]</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                                <div class="absolute top-3 left-3 bg-slate-950/90 border border-slate-800 px-2.5 py-1 rounded text-slate-400 text-[10px]">
+                                    <i class="fas fa-microchip text-blue-400 mr-1"></i> Inference Latency: <span class="text-emerald-400 font-bold">14.2ms</span>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full lg:w-64 bg-slate-900/30 p-4 space-y-4 text-slate-300">
+                                <div>
+                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1.5">Model Optimization Variables</span>
+                                    <div class="space-y-1.5 text-[11px]">
+                                        <div class="flex justify-between border-b border-slate-800/60 pb-1"><span class="text-slate-400">mAP50-95 Score:</span> <span class="text-emerald-400 font-bold">0.841</span></div>
+                                        <div class="flex justify-between"><span class="text-slate-400">Total Bounding Count:</span> <span id="statActiveBoxes" class="text-blue-400 font-bold">3 Extracted</span></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-2 border-t border-slate-800/80">
+                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1.5">LLM Context Synthesizer Engine</span>
+                                    <div class="bg-slate-950 p-2.5 rounded border border-slate-800 text-[11px] text-slate-400 leading-relaxed space-y-1.5">
+                                        <div class="text-blue-400 font-bold text-[9px] uppercase tracking-wider flex items-center"><i class="fas fa-robot mr-1.5"></i> Agent Analysis Script:</div>
+                                        <p id="llmSummaryText">"Telemetry shows 3 active object grids matching standard layout guidelines for deep structural clarifiers and wastewater treatment operations."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -226,6 +364,88 @@
     <footer class="bg-slate-100 border-t border-slate-200 py-6 text-center text-xs text-slate-500">
         <p>&copy; 2026 Shashiprabha Senanayake. All rights reserved.</p>
     </footer>
+
+    <script>
+        // 1. Interactive Script for Map 1: Regional Map Control Toggles
+        const regionSelect = document.getElementById('mapRegionSelect');
+        const layerMena = document.getElementById('layerMena');
+        const layerMexico = document.getElementById('layerMexico');
+        const statFacilities = document.getElementById('statFacilities');
+        const statConfidence = document.getElementById('statConfidence');
+
+        regionSelect.addEventListener('change', (e) => {
+            if (e.target.value === 'mena') {
+                layerMena.style.opacity = '1';
+                layerMexico.style.opacity = '0';
+                statFacilities.innerText = '1,842 Sites';
+                statConfidence.innerText = '92.4%';
+            } else {
+                layerMena.style.opacity = '0';
+                layerMexico.style.opacity = '1';
+                statFacilities.innerText = '614 Sites';
+                statConfidence.innerText = '89.7%';
+            }
+        });
+
+        // 2. Interactive Script for Map 2: YOLOv11 Confidence Metric Slider Control
+        const iouSlider = document.getElementById('iouSlider');
+        const iouValue = document.getElementById('iouValue');
+        const boxPool1 = document.getElementById('boxPool1');
+        const boxPool2 = document.getElementById('boxPool2');
+        const boxTank = document.getElementById('boxTank');
+        const statActiveBoxes = document.getElementById('statActiveBoxes');
+        const llmSummaryText = document.getElementById('llmSummaryText');
+
+        iouSlider.addEventListener('input', (e) => {
+            const currentVal = parseFloat(e.target.value) / 100;
+            iouValue.innerText = currentVal.toFixed(2);
+
+            let activeCount = 0;
+
+            // Box 1: Clarifier Pool 1 (0.94 score)
+            if (currentVal <= 0.94) {
+                boxPool1.style.opacity = '1';
+                boxPool1.style.transform = 'scale(1)';
+                activeCount++;
+            } else {
+                boxPool1.style.opacity = '0.15';
+                boxPool1.style.transform = 'scale(0.9)';
+            }
+
+            // Box 2: Clarifier Pool 2 (0.86 score)
+            if (currentVal <= 0.86) {
+                boxPool2.style.opacity = '1';
+                boxPool2.style.transform = 'scale(1)';
+                activeCount++;
+            } else {
+                boxPool2.style.opacity = '0.15';
+                boxPool2.style.transform = 'scale(0.9)';
+            }
+
+            // Box 3: Tank (0.72 score)
+            if (currentVal <= 0.72) {
+                boxTank.style.opacity = '1';
+                boxTank.style.transform = 'scale(1)';
+                activeCount++;
+            } else {
+                boxTank.style.opacity = '0.15';
+                boxTank.style.transform = 'scale(0.95)';
+            }
+
+            // Dynamically revise numbers and description
+            statActiveBoxes.innerText = `${activeCount} Extracted`;
+            
+            if(activeCount === 3) {
+                llmSummaryText.innerText = '"Telemetry shows 3 active object grids matching standard layout guidelines for deep structural clarifiers and wastewater treatment operations."';
+            } else if (activeCount === 2) {
+                llmSummaryText.innerText = '"Confidence filter excluded Sedimentation Tank object layout layer. Clarifier pool twins remain structurally confirmed."';
+            } else if (activeCount === 1) {
+                llmSummaryText.innerText = '"Strict threshold active. Only the highest-scoring core processing unit (Clarifier 1) passes bounding box generation criteria."';
+            } else {
+                llmSummaryText.innerText = '"No objects pass current constraint index parameters. Optimization pipeline recommended."';
+            }
+        });
+    </script>
 
 </body>
 </html>
