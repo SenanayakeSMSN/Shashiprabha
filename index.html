@@ -6,20 +6,7 @@
     <title>Shashiprabha Senanayake | Data Analyst & Research Consultant</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <style>
-        .leaflet-container { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important; }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #10b981;
-            cursor: pointer;
-            border: 2px solid #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
 
@@ -37,12 +24,16 @@
         </div>
     </nav>
 
-    <header id="about" class="bg-slate-950 text-white py-20 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#064e3b,transparent_50%)]"></div>
-        <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+    <header id="about" class="hero-geospatial text-white py-20 px-4">
+        <div class="hero-glow-blur"></div>
+        
+        <div class="hero-content max-w-4xl mx-auto text-center space-y-6">
             <div class="flex justify-center">
-                <div class="w-32 h-32 rounded-full overflow-hidden ring-4 ring-emerald-500/30 shadow-2xl">
-                    <img src="profile.jpg" alt="Shashiprabha Senanayake" class="w-full h-full object-cover">
+                <div class="relative group">
+                    <div class="profile-cv-glow"></div>
+                    <div class="profile-frame ring-8 ring-blue-950/50">
+                        <img src="profile.jpg" alt="Shashiprabha Senanayake" class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
             
@@ -53,14 +44,13 @@
                 <p class="text-xl md:text-2xl text-emerald-400 font-medium tracking-wide mb-4">
                     Data Analyst & Research Consultant
                 </p>
-                <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
-                    BSc (Hons) Applied Statistics graduate from the University of Colombo[cite: 62]. Specializing in combining <span class="text-emerald-300 font-semibold">statistical modelling</span>, <span class="text-emerald-300 font-semibold">geospatial AI</span>, and <span class="text-blue-300 font-semibold">predictive data analytics</span> to map critical resource layers globally[cite: 64].
-                </p>
+                <p class="text-slate-300 max-w-2xl mx-auto leading-relaxed text-base md:text-lg">
+                    BSc (Hons) Applied Statistics graduate from the University of Colombo. Specializing in combining <span class="text-emerald-300 font-semibold">statistical modelling</span>, <span class="text-emerald-300 font-semibold">geospatial AI</span>, and <span class="text-blue-300 font-semibold">predictive modelling</span> to build data-driven solutions for industry and research application.                </p>
             </div>
             
             <div class="flex justify-center space-x-4 pt-2">
-                <a href="mailto:shashinilupuli123@gmail.com" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-lg transition transform hover:-translate-y-0.5 text-sm"><i class="fas fa-envelope mr-2"></i> Email Me</a>
-                <a href="https://www.linkedin.com/in/shashiprabha-senanayake-94609b219/" target="_blank" class="bg-slate-900 border border-slate-700 hover:border-emerald-500 text-slate-200 hover:text-white px-5 py-2.5 rounded-lg font-semibold transition transform hover:-translate-y-0.5 text-sm"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
+                <a href="mailto:shashinilupuli123@gmail.com" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg shadow-emerald-900/30 transition transform hover:-translate-y-0.5"><i class="fas fa-envelope mr-2"></i> Email Me</a>
+                <a href="https://www.linkedin.com/in/shashiprabha-senanayake-94609b219/" target="_blank" class="bg-slate-900/80 border border-slate-700 hover:border-emerald-500 text-slate-200 hover:text-white px-6 py-3 rounded-lg font-semibold transition transform hover:-translate-y-0.5"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
             </div>
         </div>
     </header>
@@ -69,137 +59,38 @@
 
         <section id="experience">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b-2 border-slate-200 pb-2 flex items-center"><i class="fas fa-briefcase mr-3 text-emerald-600"></i> Professional Experience</h2>
-            <div class="space-y-12">
+            <div class="space-y-8">
                 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
                     <div class="flex flex-col md:flex-row justify-between mb-4">
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Data Analyst & Research Consultant</h3>
-                            <p class="text-emerald-600 font-medium">International Water Management Institute (IWMI) Headquarters [cite: 63, 79]</p>
+                            <h3 class="text-xl font-bold text-slate-900">Data Analyst / Research Consultant</h3>
+                            <p class="text-emerald-600 font-medium">International Water Management Institute (IWMI) Headquarters</p>
                         </div>
-                        <span class="text-slate-500 bg-slate-100 px-3 py-1 rounded-full text-sm h-fit font-medium mt-2 md:mt-0">Jun 2025 - Present [cite: 77]</span>
+                        <span class="text-slate-500 bg-slate-100 px-3 py-1 rounded-full text-sm h-fit font-medium mt-2 md:mt-0">Jun 2025 - Present</span>
                     </div>
-                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed mb-6">
-                        <li>Developed geospatial AI and data science workflows using Python, QGIS, and Google Earth Engine to process large-scale spatial datasets across Egypt, Saudi Arabia, UAE, and Mexico[cite: 82, 83].</li>
-                        <li>Fused OpenStreetMap industrial footprints, nightlight arrays (VIIRS), and remote sensing matrices to extrapolate water metrics in highly data-scarce zones[cite: 83, 86].</li>
+                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
+                        <li>Developed geospatial AI and data science workflows using Python, QGIS, and Google Earth Engine to process and analyze large-scale spatial datasets.</li>
+                        <li>Integrated vector, raster, tabular, and web-scraped data from sources including Google Maps, OpenStreetMap, business registries, population grids, nightlight imagery, land-use classifications, and remote sensing products.</li>
+                        <li>Performed spatial data preprocessing, feature engineering, geospatial analysis, and predictive modelling to identify industrial activity hotspots and estimate industrial water demand in data-scarce regions.</li>
+                        <li>Built automated data acquisition pipelines, conducted literature reviews on AI applications in water resource management, and contributed to research methodology development and scientific publication preparation.</li>
                     </ul>
-
-                    <div class="mt-6 border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-slate-950 font-mono text-xs">
-                        <div class="bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex items-center justify-between text-slate-400">
-                            <div class="flex items-center space-x-2">
-                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                <span class="font-semibold text-slate-200">Interactive OpenStreetMap Pipeline: Global Industrial Spatial Vectors</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col lg:flex-row h-[420px]">
-                            <div class="w-full lg:w-64 bg-slate-900/60 border-b lg:border-b-0 lg:border-r border-slate-800 p-4 space-y-4 text-slate-300 flex flex-col justify-between">
-                                <div class="space-y-4">
-                                    <div>
-                                        <label class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1.5">Focus Region Territory</label>
-                                        <select id="mapRegionSelect" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-1.5 text-emerald-400 font-bold focus:outline-none focus:border-emerald-500 cursor-pointer">
-                                            <option value="all">Global Study Area (All 4)</option>
-                                            <option value="mexico">Mexico (Bajío & North)</option>
-                                            <option value="saudi">Saudi Arabia</option>
-                                            <option value="uae">United Arab Emirates</option>
-                                            <option value="egypt">Egypt (Nile Delta & Suez)</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div>
-                                        <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">Detected Matrix Extents</span>
-                                        <div class="bg-slate-950 p-2.5 rounded border border-slate-800 space-y-2 text-[11px]">
-                                            <div class="flex justify-between"><span class="text-slate-400">Active Clusters:</span> <span id="clusterCountLabel" class="text-emerald-400 font-bold">40 Sites Verified</span></div>
-                                            <div class="flex justify-between"><span class="text-slate-400">Data Sources:</span> <span class="text-blue-400">OSM + Google Cloud</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-[10px] text-slate-500 leading-normal bg-slate-950 p-2 rounded border border-slate-800/60">
-                                    <i class="fas fa-info-circle text-emerald-500 mr-1"></i> Viewport flies directly to targeted administrative clusters upon selection.
-                                </div>
-                            </div>
-                            
-                            <div id="industrialBaseMap" class="flex-1 bg-slate-900 h-full w-full z-10"></div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
                     <div class="flex flex-col md:flex-row justify-between mb-4">
                         <div>
                             <h3 class="text-xl font-bold text-slate-900">Data Science Intern - Research</h3>
-                            <p class="text-emerald-600 font-medium">International Water Management Institute (IWMI) Headquarters [cite: 80]</p>
+                            <p class="text-emerald-600 font-medium">International Water Management Institute (IWMI) Headquarters</p>
                         </div>
-                        <span class="text-slate-500 bg-slate-100 px-3 py-1 rounded-full text-sm h-fit font-medium mt-2 md:mt-0">Nov 2024 - May 2025 [cite: 80]</span>
+                        <span class="text-slate-500 bg-slate-100 px-3 py-1 rounded-full text-sm h-fit font-medium mt-2 md:mt-0">Nov 2024 - May 2025</span>
                     </div>
-                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed mb-6">
-                        <li>Evaluated Google.org-funded telemetry missions utilizing YOLOv11 deep-learning models to locate and segment municipal wastewater treatment structures[cite: 88, 89].</li>
+                    <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
+                        <li>Investigated the detection of wastewater treatment plants using satellite imagery and annotated GeoTIFF datasets funded by Google.org.</li>
+                        <li>Develop, annotate datasets for, and train an OpenCV-based image processing chain alongside deploying the existing YOLOv11 object detection model to identify characteristic features of Wastewater Treatment Plants (WWTPs).</li>
+                        <li>Designed an LLM-integrated system to concurrently analyze multiple WWTP images and generate interactive, query-based analytical responses.</li>
+                        <li>Proposed critical methodological enhancements adopted by the Water Data Science team for final production model deployment.</li>
                     </ul>
-
-                    <div class="mt-6 border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-slate-950 font-mono text-xs">
-                        <div class="bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex items-center justify-between text-slate-400">
-                            <div class="flex items-center space-x-2">
-                                <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
-                                <span class="font-semibold text-slate-200">YOLOv11 Computer Vision Layer Over Real Aerial WWTP Infrastructure Base</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="text-[10px] text-slate-400 hidden sm:inline">Confidence Slider (IOU):</span>
-                                <input type="range" id="iouSlider" min="50" max="95" value="65" class="w-24 h-1 accent-emerald-500 bg-slate-800 rounded-lg cursor-pointer">
-                                <span id="iouValue" class="text-emerald-400 font-bold bg-slate-950 px-1.5 py-0.5 rounded border border-slate-800 text-[10px]">0.65</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col md:flex-row h-[380px] relative">
-                            <div class="flex-1 relative bg-slate-950 overflow-hidden flex items-center justify-center p-2">
-                                
-                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" alt="Wastewater Treatment Plant Satellite Imagery Base" class="absolute inset-0 w-full h-full object-cover opacity-45 mix-blend-luminosity">
-                                
-                                <div class="absolute inset-0 bg-[linear-gradient(to_right,#334155_1px,transparent_1px),linear-gradient(to_bottom,#334155_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-                                <div class="absolute inset-0 bg-slate-950/10 pointer-events-none"></div>
-                                
-                                <div class="relative w-full h-full max-w-md max-h-[300px]">
-                                    
-                                    <div id="cvClarifier1" class="absolute top-[15%] left-[12%] w-24 h-24 rounded-full border-2 border-emerald-400 bg-emerald-400/10 transition-all duration-300 shadow-[0_0_15px_rgba(52,211,153,0.2)]">
-                                        <span class="absolute -top-5 left-0 bg-emerald-500 text-slate-950 font-bold px-1 rounded-sm text-[8px] whitespace-nowrap shadow-md">Clarifier_Pool [0.92]</span>
-                                    </div>
-
-                                    <div id="cvClarifier2" class="absolute top-[48%] left-[42%] w-20 h-20 rounded-full border-2 border-emerald-400 bg-emerald-400/10 transition-all duration-300 shadow-[0_0_15px_rgba(52,211,153,0.2)]">
-                                        <span class="absolute -top-5 left-0 bg-emerald-500 text-slate-950 font-bold px-1 rounded-sm text-[8px] whitespace-nowrap shadow-md">Clarifier_Pool [0.84]</span>
-                                    </div>
-
-                                    <div id="cvAeration" class="absolute bottom-[8%] left-[5%] w-36 h-16 border-2 border-blue-400 bg-blue-400/10 transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                                        <span class="absolute -top-5 left-0 bg-blue-500 text-white font-bold px-1 rounded-sm text-[8px] whitespace-nowrap shadow-md">Aeration_Basin [0.74]</span>
-                                    </div>
-
-                                    <div id="cvDigester" class="absolute top-[20%] right-[10%] w-20 h-20 border-2 border-amber-400 bg-amber-400/10 transition-all duration-300 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
-                                        <span class="absolute -top-5 left-0 bg-amber-400 text-slate-950 font-bold px-1 rounded-sm text-[8px] whitespace-nowrap shadow-md">Anaerobic_Digester [0.58]</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="absolute bottom-3 left-3 bg-slate-950/90 border border-slate-800 px-2 py-1 rounded text-slate-400 text-[9px] backdrop-blur-xs">
-                                    <i class="fas fa-satellite text-blue-400 mr-1"></i> Input Scale: <span class="text-slate-200">0.5m/px Annotated GeoTIFF [cite: 89]</span>
-                                </div>
-                            </div>
-                            
-                            <div class="w-full md:w-64 bg-slate-900/50 p-4 flex flex-col justify-between text-slate-300 border-t md:border-t-0 md:border-l border-slate-800">
-                                <div class="space-y-4">
-                                    <div>
-                                        <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">Inference Engine Metrics</span>
-                                        <div class="space-y-1.5 text-[11px] bg-slate-950 p-2.5 rounded border border-slate-800">
-                                            <div class="flex justify-between"><span class="text-slate-400">Active Vectors:</span> <span id="activeBoxCount" class="text-emerald-400 font-bold">4 Elements</span></div>
-                                            <div class="flex justify-between"><span class="text-slate-400">Processing Speed:</span> <span class="text-blue-400">12.8 ms</span></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider block mb-1">LLM Synthesizer Insight [cite: 90]</span>
-                                        <p id="llmSummaryText" class="bg-slate-950 p-2.5 rounded border border-slate-800 text-[11px] text-slate-400 leading-relaxed">
-                                            "Four infrastructure features verified against model baselines, including signature circular clarifying systems, active aeration basins, and anaerobic digestion complexes."
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -208,220 +99,133 @@
         <section id="projects">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b-2 border-slate-200 pb-2 flex items-center"><i class="fas fa-project-diagram mr-3 text-emerald-600"></i> Highlighted Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
                     <div>
-                        <h3 class="text-base font-bold text-slate-900 mb-1.5">Skill Gap Analyzer & Learning Paths Optimizer [cite: 98]</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">An automated evaluation ecosystem parsing resume matrices using pdfplumber/pytesseract OCR, matching domain keywords to MongoDB records, and rendering dynamic upskilling pathways via Gemini LLM integrations[cite: 99, 100, 103].</p>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Skill Gap Analyzer with Personalized Learning Paths</h3>
+                        <p class="text-slate-600 text-sm mb-4">An intelligent automated recruitment and upskilling system. It parses PDF/image resumes using pdfplumber and pytesseract, weights skill relevance against 1,000 entries in MongoDB, and embeds the Google Gemini API for tailored career mentorship.</p>
                     </div>
-                    <div class="flex flex-wrap gap-1.5 mt-4 text-[10px]">
-                        <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Python</span>
-                        <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">MongoDB</span>
-                        <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Gemini API</span>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">Python</span>
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">MongoDB</span>
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">Gemini API</span>
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">OCR</span>
                     </div>
                 </div>
 
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
                     <div>
-                        <h3 class="text-base font-bold text-slate-900 mb-1.5">Modelling Dissolved Oxygen Dynamics (Myanmar Ponds) [cite: 118]</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">Final-year honors research project implementing deep-learning LSTM time-series architectures to capture critical biochemical resource variations, packaged into a clean interactive Streamlit dashboard[cite: 119, 121].</p>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Modelling Dissolved Oxygen Dynamics (Myanmar Ponds)</h3>
+                        <p class="text-slate-600 text-sm mb-4">Final year research project focused on deep learning time-series frameworks. Developed and deployed a custom LSTM model onto a Streamlit dashboard to track and predict water quality fluctuations.</p>
                     </div>
-                    <div class="flex flex-wrap gap-1.5 mt-4 text-[10px]">
-                        <span class="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-medium">Deep Learning</span>
-                        <span class="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-medium">LSTM</span>
-                        <span class="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-medium">Streamlit</span>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">Python</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">Deep Learning</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">LSTM</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">Streamlit</span>
                     </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Habitat Connectivity Indicator (Nippon Steel)</h3>
+                        <p class="text-slate-600 text-sm mb-4">Developed an asset-level ecological connectivity function using spatial analysis. Linked industrial global map layers with environmental assets to drive biodiversity-informed decisions.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">Python</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">Spatial Analysis</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-1 rounded font-semibold">GIS</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Interactive Insights Dashboards</h3>
+                        <p class="text-slate-600 text-sm mb-4">Constructed interactive metric apps including Global YouTube Trends on Power BI, Retail Bike Sales analytics, and an R Shiny application monitoring regional EV population growth trajectories.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">Power BI</span>
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">R Shiny</span>
+                        <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded font-semibold">Excel</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b-2 border-slate-100 pb-2 flex items-center"><i class="fas fa-code mr-3 text-emerald-600"></i> Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-xs tracking-wide uppercase text-emerald-600">Languages & Core</h3>
+                    <p class="text-slate-600 leading-relaxed">Python, R, SQL, Java, GNU Octave, Statistical Modelling, Deep Learning, Computer Vision, Machine Learning, Technical Report Writing</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-xs tracking-wide uppercase text-emerald-600">Geospatial & Cloud</h3>
+                    <p class="text-slate-600 leading-relaxed">Google Earth Engine, QGIS, GIS & Geospatial Analysis, Google Cloud Platform APIs, GitHub, Scientific Data Analysis</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-xs tracking-wide uppercase text-emerald-600">Libraries & Toolkits</h3>
+                    <p class="text-slate-600 leading-relaxed">Scikit-learn, Pandas, NumPy, Streamlit, MongoDB, PostgreSQL, MySQL, Power BI, Excel, SPSS, Minitab</p>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-            <h2 class="text-xl font-bold text-slate-900 mb-4 border-b pb-2 flex items-center"><i class="fas fa-code mr-2 text-emerald-600"></i> Core Competencies</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs leading-relaxed text-slate-600">
-                <div>
-                    <h3 class="font-bold text-slate-900 mb-1 uppercase text-emerald-600 tracking-wider">Data Analytics & Math [cite: 44]</h3>
-                    <p>Python, R, SQL, Statistical Modelling, Deep Learning, Predictive Modeling, Time-Series Forecasting, Data Cleansing Matrices[cite: 44].</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section id="education" class="space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 flex items-center"><i class="fas fa-graduation-cap mr-3 text-emerald-600"></i> Education</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-1">Apr 2021 - May 2025</span>
+                        <h3 class="text-lg font-bold text-slate-900">BSc (Hons) Applied Statistics</h3>
+                        <p class="text-slate-700">University of Colombo, Sri Lanka</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">GPA: 3.58 / 4.00 (Second Upper Division) • Final Year Research: Grade A</p>
+                        <p class="text-xs text-slate-400 mt-1">Specialized Focus: Statistics, Data Science, Actuarial & Financial Mathematics, Operations Research, CS & IT</p>
+                    </div>
+                    <hr class="border-slate-100">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-1">2006 - 2019</span>
+                        <h3 class="text-md font-bold text-slate-900">Primary & Secondary Education</h3>
+                        <p class="text-slate-700 text-sm">Girls' High School, Kandy</p>
+                        <p class="text-xs text-slate-500 mt-1">Advanced Level Examination: Pure Mathematics, Applied Mathematics, Physics, Chemistry</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="font-bold text-slate-900 mb-1 uppercase text-emerald-600 tracking-wider">Geospatial & Cloud [cite: 44, 45]</h3>
-                    <p>Google Earth Engine (GEE), QGIS Architecture, Spatial Vector Extractions, Remote Sensing Data Processing pipelines[cite: 44, 45].</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-900 mb-1 uppercase text-emerald-600 tracking-wider">Frameworks & Tools [cite: 45]</h3>
-                    <p>Scikit-Learn, Pandas, NumPy, Streamlit, Power BI, R Shiny, PostgreSQL, Leaflet JS, MongoDB, Microsoft Excel[cite: 45, 109].</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="bg-slate-900 text-white p-8 rounded-xl text-center space-y-4">
-            <h2 class="text-xl font-bold">Initiate Professional Collaboration [cite: 60]</h2>
-            <p class="text-slate-400 max-w-md mx-auto text-xs">Available for engineering pipelines, automated remote sensing systems, spatial data optimization frameworks, and custom statistical applications[cite: 64, 129].</p>
-            <div class="flex flex-wrap justify-center gap-6 text-xs font-mono text-emerald-400 pt-2">
-                <span><i class="fas fa-phone mr-1.5"></i> +94 70 5523737 [cite: 2]</span>
-                <span><i class="fas fa-envelope mr-1.5"></i> shashinilupuli123@gmail.com [cite: 3]</span>
-                <span><i class="fab fa-linkedin mr-1.5"></i> shashiprabha-senanayake [cite: 4]</span>
+            <section id="publications" class="space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-slate-200 pb-2 flex items-center"><i class="fas fa-book mr-3 text-emerald-600"></i> Research & Publications</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-1">Nov 2024 - Apr 2025</span>
+                        <h4 class="font-bold text-gray-900 text-sm">Modelling Dissolved Oxygen Levels in Aquacultural Ponds in Myanmar</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Published Abstract — International Conference on Data Science (ICDS 2025), University of Colombo. Applied machine learning to identify ecological and environmental trends driving variable pond safety levels.</p>
+                    </div>
+                    <hr class="border-slate-100">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-1">Jul 2025 - Present</span>
+                        <h4 class="font-bold text-gray-900 text-sm">A framework for estimating industrial water demand at large scale: Application to Egypt, Saudi Arabia, and the United Arab Emirates</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Research Report (Manuscript in Preparation) — Designing a computational bottom-up system explicitly serving data-scarce zones throughout the MENA region to promote reclaimed water security management.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="contact" class="bg-slate-900 text-white p-8 rounded-2xl text-center space-y-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-teal-950/30 to-slate-900/10 pointer-events-none"></div>
+            <h2 class="text-2xl font-bold relative z-10">Let's Connect</h2>
+            <p class="text-slate-400 max-w-md mx-auto text-sm relative z-10">Are you looking to collaborate on machine learning implementations, environmental data modeling, spatial AI architectures, or analytical telemetry projects?</p>
+            <div class="flex flex-wrap justify-center gap-6 text-sm font-medium pt-2 relative z-10">
+                <span class="flex items-center gap-2"><i class="fas fa-phone text-emerald-400"></i> +94 70 5523737</span>
+                <span class="flex items-center gap-2"><i class="fas fa-envelope text-emerald-400"></i> shashinilupuli123@gmail.com</span>
+                <span class="flex items-center gap-2"><i class="fab fa-linkedin text-emerald-400"></i> shashiprabha-senanayake</span>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-slate-100 border-t border-slate-200 py-4 text-center text-[11px] text-slate-500">
+    <footer class="bg-slate-100 border-t border-slate-200 py-6 text-center text-xs text-slate-500">
         <p>&copy; 2026 Shashiprabha Senanayake. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // --- 1. DYNAMIC DATA STRUCTURE CONTAINING EXACTLY 10 CLUSTER ANCHORS PER COUNTRY ---
-        const industrialClusters = {
-            mexico: [
-                { lat: 20.5888, lng: -100.3899, name: "Querétaro Industrial Park Hub" },
-                { lat: 21.1236, lng: -101.6807, name: "Leon Bajío Automotive Logistics Cluster" },
-                { lat: 20.7202, lng: -103.3916, name: "Guadalajara Technology Corridor" },
-                { lat: 25.6866, lng: -100.3161, name: "Monterrey Heavy Manufacturing Manufacturing Matrix" },
-                { lat: 19.4326, lng: -99.1332, name: "Valle de México Industrial Zone" },
-                { lat: 22.1565, lng: -100.9855, name: "San Luis Potosí Logistics Center" },
-                { lat: 20.5222, lng: -99.8901, name: "San Juan del Río Production Zone" },
-                { lat: 21.8853, lng: -102.2916, name: "Aguascalientes Nissan Manufacturing Ring" },
-                { lat: 32.5149, lng: -117.0382, name: "Tijuana Maquiladora Border Cluster" },
-                { lat: 19.0414, lng: -98.2063, name: "Puebla Automotive Complex" }
-            ],
-            saudi: [
-                { lat: 24.7136, lng: 46.6753, name: "Riyadh Industrial City 2" },
-                { lat: 27.0112, lng: 49.5633, name: "Jubail Industrial City Infrastructure" },
-                { lat: 21.4858, lng: 39.1925, name: "Jeddah Port Chemical Processing Corridor" },
-                { lat: 23.9536, lng: 38.2500, name: "Yanbu Petrochemical Complex Refinery" },
-                { lat: 26.3927, lng: 49.9777, name: "Dammam Industrial District Area 3" },
-                { lat: 22.3881, lng: 39.1332, name: "King Abdullah Economic City (KAEC) Zone" },
-                { lat: 24.4686, lng: 39.6142, name: "Madinah Knowledge & Industrial Hub" },
-                { lat: 17.4933, lng: 44.1272, name: "Najran Industrial Zone Boundary" },
-                { lat: 26.2285, lng: 50.1834, name: "Khobar Logistics Terminal Extent" },
-                { lat: 27.5114, lng: 41.7208, name: "Hail Industrial Agricultural Support Grid" }
-            ],
-            uae: [
-                { lat: 24.8980, lng: 55.1558, name: "Jebel Ali Free Zone (JAFZA) Core" },
-                { lat: 24.4286, lng: 54.4925, name: "ICAD (Industrial City of Abu Dhabi) I & II" },
-                { lat: 24.9765, lng: 55.2185, name: "Dubai Industrial City Logistics Complex" },
-                { lat: 24.7954, lng: 54.6468, name: "KIZAD (Khalifa Industrial Zone Abu Dhabi)" },
-                { lat: 25.2867, lng: 55.3916, name: "Al Qusais Light Industrial Grid" },
-                { lat: 25.3216, lng: 55.5132, name: "Sharjah Industrial Area 15" },
-                { lat: 25.4052, lng: 55.5136, name: "Ajman Jurf Industrial Sector" },
-                { lat: 25.6741, lng: 55.9842, name: "Al Ghail Industrial Park (Ras Al Khaimah)" },
-                { lat: 25.1164, lng: 56.3418, name: "Fujairah Port Refineries Matrix" },
-                { lat: 25.5322, lng: 55.7154, name: "Umm Al Quwain Industrial Zone Expansion" }
-            ],
-            egypt: [
-                { lat: 30.0131, lng: 31.6241, name: "10th of Ramadan City Industrial Hub" },
-                { lat: 29.8489, lng: 31.3142, name: "Helwan Heavy Industrial Manufacturing Strip" },
-                { lat: 30.2963, lng: 31.1354, name: "6th of October City Logistics Zone" },
-                { lat: 29.9602, lng: 32.5489, name: "Suez Canal Economic Zone (SCZONE)" },
-                { lat: 31.2001, lng: 29.9187, name: "Amreya Chemical and Textile Processing Hub" },
-                { lat: 31.0414, lng: 31.3785, name: "Mansoura Light Production Sector" },
-                { lat: 30.0621, lng: 31.4114, name: "El Obour Food Processing Zone" },
-                { lat: 27.1810, lng: 31.1837, name: "Assiut Regional Industrial Complex" },
-                { lat: 29.2145, lng: 30.9122, name: "Komi Oshim Industrial District (Fayoum)" },
-                { lat: 31.2589, lng: 32.2841, name: "Port Said Eastern Industrial Port Zone" }
-            ]
-        };
-
-        // --- 2. INITIALIZE INTERACTIVE LEAFLET TILED GLOBAL WORLD BASE MAP ---
-        const map = L.map('industrialBaseMap').setView([24.00, 10.00], 2);
-
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 19
-        }).addTo(map);
-
-        let activeMarkers = [];
-
-        function renderClusterPoints(filter) {
-            activeMarkers.forEach(m => map.removeLayer(m));
-            activeMarkers = [];
-
-            let targetKeys = filter === 'all' ? Object.keys(industrialClusters) : [filter];
-            let totalCount = 0;
-
-            targetKeys.forEach(countryKey => {
-                let colorIndex = countryKey === 'mexico' ? '#a855f7' : countryKey === 'saudi' ? '#10b981' : countryKey === 'uae' ? '#3b82f6' : '#f59e0b';
-                
-                industrialClusters[countryKey].forEach(point => {
-                    totalCount++;
-                    let marker = L.circleMarker([point.lat, point.lng], {
-                        radius: 5,
-                        fillColor: colorIndex,
-                        color: "#ffffff",
-                        weight: 1,
-                        opacity: 0.9,
-                        fillOpacity: 0.75
-                    }).bindPopup(`<div style="color:#000; font-weight:bold; font-size:11px;">${point.name}</div><div style="color:#666;font-size:10px;">Lat: ${point.lat}, Lng: ${point.lng}</div>`);
-                    
-                    marker.addTo(map);
-                    activeMarkers.push(marker);
-                });
-            });
-
-            document.getElementById('clusterCountLabel').innerText = `${totalCount} Sites Active`;
-
-            if (filter !== 'all') {
-                const group = new L.featureGroup(activeMarkers);
-                map.flyToBounds(group.getBounds(), { padding: [40, 40], duration: 1.2 });
-            } else {
-                map.flyTo([24.00, 10.00], 2, { duration: 1 });
-            }
-        }
-
-        renderClusterPoints('all');
-
-        document.getElementById('mapRegionSelect').addEventListener('change', (e) => {
-            renderClusterPoints(e.target.value);
-        });
-
-
-        // --- 3. YOLOv11 INFERENCE INTERACTIVE COEFFICIENT MATRIX ---
-        const iouSlider = document.getElementById('iouSlider');
-        const iouValue = document.getElementById('iouValue');
-        const activeBoxCount = document.getElementById('activeBoxCount');
-        const llmSummaryText = document.getElementById('llmSummaryText');
-
-        const boxes = [
-            { id: 'cvClarifier1', score: 0.92 },
-            { id: 'cvClarifier2', score: 0.84 },
-            { id: 'cvAeration', score: 0.74 },
-            { id: 'cvDigester', score: 0.58 }
-        ];
-
-        iouSlider.addEventListener('input', (e) => {
-            const threshold = parseFloat(e.target.value) / 100;
-            iouValue.innerText = threshold.toFixed(2);
-            
-            let passingCount = 0;
-
-            boxes.forEach(box => {
-                const element = document.getElementById(box.id);
-                if (box.score >= threshold) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'scale(1)';
-                    passingCount++;
-                } else {
-                    element.style.opacity = '0.08';
-                    element.style.transform = 'scale(0.96)';
-                }
-            });
-
-            activeBoxCount.innerText = `${passingCount} Elements`;
-
-            if (passingCount === 4) {
-                llmSummaryText.innerText = `"Four infrastructure features verified against model baselines, including signature circular clarifying systems, active aeration basins, and anaerobic digestion complexes."`;
-            } else if (passingCount === 3) {
-                llmSummaryText.innerText = `"IOU threshold excluded Anaerobic Digester layout [0.58]. Core processing units (Clarifiers & Aeration Basin) remain structurally confirmed over satellite base map layer."`;
-            } else if (passingCount === 2) {
-                llmSummaryText.innerText = `"High confidence active. Only primary clarification twin circles [0.92, 0.84] pass bounding validation criteria. Aeration structures hidden."`;
-            } else if (passingCount === 1) {
-                llmSummaryText.innerText = `"Strict model constraints active. Only the highest-scoring core processing footprint (Primary Clarifier [0.92]) is passed to pipeline outputs."`;
-            } else {
-                llmSummaryText.innerText = `"No objects pass current constraint parameters. Model output is empty. Lower the slider threshold to allow lower-confidence predictions."`;
-            }
-        });
-    </script>
 </body>
 </html>
